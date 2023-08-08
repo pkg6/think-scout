@@ -1,0 +1,33 @@
+{
+  "name": "tp5er/think-scout",
+  "type": "library",
+  "description": "Thinkphp Scout provides a driver based solution to searching your Eloquent models. Inspired By Laravel Scout.",
+  "keywords": [
+    "php",
+    "Thinkphp"
+  ],
+  "require": {
+    "php": ">7.1",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "tp5er\\think\\scout\\": "src"
+    }
+  },
+  "require-dev": {
+    "topthink/framework": "^6.0",
+    "topthink/think-queue": "^3.0",
+    "elasticsearch/elasticsearch": "^5.5"
+  },
+  "extra": {
+    "think": {
+      "services": [
+        "tp5er\\think\\scout\\Service"
+      ],
+      "config": {
+        "scout": "config/scout.php"
+      }
+    }
+  }
+}
